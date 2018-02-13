@@ -1,6 +1,6 @@
 require(['translator', 'dateService'], function(translator, dateService) {
     
-    var sourceText = '12';
+    var sourceText = '1234567890';
 //    var sourceText = dateService.today();
 //    var sourceText = document.getElementById('sourceText').value;
     

@@ -77,10 +77,10 @@ define([], function() {
         8: 'Build/Destroy',
         9: 'Born',
         0: 'Cipher'
-    }
+    };
 
     return { 
         supremeMale: supremeMale,
-        supremeFemale: supremeFemale
+        supremeFemale: supremeFemale,
     }
 });

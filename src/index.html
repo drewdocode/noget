@@ -4,20 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <title>Nogefy</title>
 </head>
 
 <body>
 
-    <br><br><br>
+    <br><br>
 
-    <center>
-        <textarea name="sourceText" id="sourceText" cols="30" rows="3"></textarea>
-        <section id="nogefication"></section>
-    </center>
+            <textarea name="sourceText" id="sourceText" cols="30" rows="3"></textarea>
+            <button id="translateButton">Translate</button>
+        <section id="translation"></section>
 
-    <script data-main="app/app.js" src="../node_modules/requirejs/require.js"></script>
+    <script data-main="app/config.js" src="../node_modules/requirejs/require.js"></script>
 </body>
 
 </html>

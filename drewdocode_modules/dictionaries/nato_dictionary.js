@@ -40,6 +40,6 @@ define([], function() {
     };
 
     return { 
-        natoPhoneticAlphabet: natoPhoneticAlphabet,
+        translation: natoPhoneticAlphabet,
     }
 });

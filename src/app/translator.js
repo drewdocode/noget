@@ -1,4 +1,4 @@
-define(['noge_dictionary'], function(dictionary) {
+define(['supreme'], function(dictionary) {
 
     function recurse(sourceText) {
         if(sourceText.length == 0) {
@@ -6,10 +6,10 @@ define(['noge_dictionary'], function(dictionary) {
         }
         else {
             sourceText = sourceText.replace(/\W/g, '')
-            var book = dictionary.translation;
+            var alphanumerics = dictionary.alphanumerics;
             var firstChar = sourceText.split('')[0].toUpperCase();
             var restChars = sourceText.substring(1, sourceText.length);    
-            return book[firstChar] + ' ' + recurse(restChars);
+            return alphanumerics[firstChar] + ' ' + recurse(restChars);
         }
     }
 

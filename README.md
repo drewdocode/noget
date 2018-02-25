@@ -1,8 +1,6 @@
 # NOGET
 
-Nation of Gods and Earths Translator
-
-Built on Backbone Marionette, Bootstrap, RequireJS
+#### Nation of Gods and Earths Translator
 
 1 - Knowledge
 2 - Wisdom
@@ -42,27 +40,3 @@ X - Unknown: the lack of knowledge
 Y - Why
 Z -Zig-Zag-Zig: from Knowledge to Wisdom to Understanding
 
-
-## Development server
-
-???
-
-## Code scaffolding
-
-???
-
-## Build
-
-???
-
-## Running unit tests
-
-???
-
-## Running end-to-end tests
-
-???
-
-## Further help
-
-???

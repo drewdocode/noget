@@ -8,11 +8,15 @@ define(['supreme'], function(supreme) {
 
         while(sourceText.length > 1) {
             var numbers = sourceText.split('');
-            var sum = sumArray(numbers);
-            translation += 'all being born to ';
-            if(numbers[0] > numbers[1]) {
+            var sum = sumArray(numbers);            
+            
+            if(numbers[0] > numbers[1] && sourceText != "10") {
                 translation += 'not being born to ';
             }
+            else {
+                translation += 'all being born to ';
+            }
+            
             sourceText = sum.toString();
             translation += recurse(sourceText);
         }

@@ -10,7 +10,7 @@ define(['supreme'], function(supreme) {
             var numbers = sourceText.split('');
             var sum = sumArray(numbers);            
             
-            if(numbers[0] > numbers[1] && sourceText != "10") {
+            if(numbers[0] > numbers[1] && numbers[1] > 0) {
                 translation += 'not being born to ';
             }
             else {

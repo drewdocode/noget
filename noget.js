@@ -11,10 +11,9 @@ define(['supreme'], function(supreme) {
             var sum = sumArray(numbers);
             translation += 'all being born to ';
             if(numbers[0] > numbers[1]) {
-                translation += 'lack of ';
+                translation += 'not being born to ';
             }
             sourceText = sum.toString();
-            console.log(sourceText);
             translation += recurse(sourceText);
         }
 

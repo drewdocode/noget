@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "eslint": "^4.18.1"
   },
   "devDependencies": {},
   "repository": {

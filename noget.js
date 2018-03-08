@@ -1,4 +1,51 @@
-define(['legend'], function(supreme) {
+/*
+
+this file should prolly be refactored to translator.js
+the canon.js should prolly be refactored to noget_canon.js
+then i could have a natopat_canon.js, etc
+(i could prolly have a canon git project with a group of mad canons)
+
+.......
+
+higher level functions suitable for the 5% domain
+probably should be in the other project only
+
+0) getTodaysMath: return todays mathematics
+
+lower level translator functions suitable for this type of "translation" domain
+these apply to any injected Canon, and is the interface of any Translator
+
+0) spell(text): translate each alphanumeric in a given text
+turn each alphanumeric into a term
+return them as a space-delimited block/line of terms
+
+0) despell(text): translate each term in a given text
+turn each term into an alphanumeric (remove each encountered non-term from the text)
+return them as a 1..n space-delimited block/line of terms
+
+0) define(text): translate each alphanumeric in a given text
+turn each alphanumeric into a meaning
+return them as a newline-delimited block of meanings
+
+even lower level functions (maybe in a canon_service)
+these should be implemented by any "canon service/dao"
+
+0) findAllCanonItems: return entire canon
+0) findAllTerms: return all terms from canon
+0) findAllMeanings: return all meanings from canon
+0) findAllAlphanumerics: return all alphanumerics from canon
+
+0) findCanonItemByAlphanumeric(alphanumeric): return canon item by alphanumeric
+0) findTermByAlphanumeric(alphanumeric): return term by alphanumeric
+0) findMeaningByAlphanumeric(alphanumeric): return meaning by alphanumeric
+
+0) findCanonItemByTerm(term): return canon item by term
+0) findAlphanumericByTerm(term): return alphanumeric by term
+0) findMeaningByTerm(term): return meaning by term
+
+*/
+
+define(['canon'], function(supreme) {
 
     var translate = function(sourceText) {
         sourceText = sourceText.replace(/\W/g, '');
@@ -15,7 +62,7 @@ define(['legend'], function(supreme) {
             }
             else {
                 translation += 'all being born to ';
-            }
+            }2
             
             sourceText = sum.toString();
             translation += recurse(sourceText);
@@ -30,7 +77,7 @@ define(['legend'], function(supreme) {
         }
         else {
             sourceText = sourceText.replace(/\W/g, '');
-            var supremeAlphanumerics = supreme.scroll.alphanumerics;
+            var supremeAlphanumerics = supreme.alphanumerics;
             var firstChar = sourceText.split('')[0].toUpperCase();
             var restChars = sourceText.substring(1, sourceText.length);
             return supremeAlphanumerics.word[firstChar] + ' ' + recurse(restChars);

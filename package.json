@@ -4,14 +4,20 @@
   "description": "#### Nation of Gods and Earths Translator",
   "main": "src/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.5"
+    "domready": "^1.0.8",
+    "eslint": "^4.18.2",
+    "lodash": "^4.17.5",
+    "requirejs": "^2.3.5",
+    "umd": "^3.0.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jasmine": "^3.1.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/drewdocode/noget.git"

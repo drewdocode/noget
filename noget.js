@@ -1,6 +1,6 @@
-/*
+w/*
 
-this file should prolly be refactored to translator.js
+this file and project should prolly be refactored to translator.js
 the canon.js should prolly be refactored to noget_canon.js
 then i could have a natopat_canon.js, etc
 (i could prolly have a canon git project with a group of mad canons)
@@ -46,6 +46,8 @@ these should be implemented by any "canon service/dao"
 */
 
 define(['canon'], function(supreme) {
+
+    'use strict';
 
     var translate = function(sourceText) {
         sourceText = sourceText.replace(/\W/g, '');

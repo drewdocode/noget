@@ -1,7 +1,4 @@
-define([], function () {
-
 /*
-    Shema:
 
     var canonItem = {
         alphanumeric: 'a',  // single char
@@ -10,11 +7,17 @@ define([], function () {
     }
 
     var canonItems = [1..n canonItem]
-
-    http://www.ancientorderoffreeasiatics.com/MathNGE.html
-    http://www.ancientorderoffreeasiatics.com/Mathematics.html
-
 */
+
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        define([], factory);
+    } else if (typeof module === 'object' && module.exports) {
+        module.exports = factory();
+    } else {
+        root.returnExports = factory();
+    }
+}(typeof self !== 'undefined' ? self : this, function () {
 
     var canonItems = [
         {
@@ -30,7 +33,7 @@ define([], function () {
 
         {
             alphanumeric: 'C',
-            term: 'Cee (See)',
+            term: 'Cee or See',
             meaning: 'See is to knowledge wisdom being born and gain a clear picture, which will be the understanding. To see is to be equipped with sight both insight and eyesight, C is the cream.'
         },
         {
@@ -182,23 +185,27 @@ define([], function () {
         {
             alphanumeric: '7',
             term: 'God',
+//            term: 'God and Perfection',
             meaning: '(also in alphabet) God is the original Asiatic Blackman, the Blackman is God, a wiseman\'s equality born to build or destroy infinity. I, is self, self is the true reality, Son of Man; God Allah.'
         },
         {
             alphanumeric: '8',
-            term: 'Build and Destroy',
+            term: 'Build or Destroy',
             meaning: 'Build or Destroy: Build means to add on to life a positive creation or education; destroy means to know of, take, that which is untrue, and add light to the knowledge.'
         },
         {
             alphanumeric: '9',
-            term: 'Born', meaning: '(also in alphabet) Born is to bring into existence a mental birth of self.'
+            term: 'Born',
+            meaning: '(also in alphabet) Born is to bring into existence a mental birth of self.'
         },
         {
             alphanumeric: '0',
             term: 'Cipher',
+//            term: 'Cipher, Cypher (Cycle or Circle)',
             meaning: '(also in alphabet) Cipher is the completion of a circle or 360 degrees of Knowledge, Wisdom and Understanding.'
         }
     ];
 
     return canonItems;
-});
+}));
+

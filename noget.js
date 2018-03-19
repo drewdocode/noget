@@ -1,4 +1,4 @@
-w/*
+/*
 
 this file and project should prolly be refactored to translator.js
 the canon.js should prolly be refactored to noget_canon.js
@@ -27,21 +27,6 @@ return them as a 1..n space-delimited block/line of terms
 turn each alphanumeric into a meaning
 return them as a newline-delimited block of meanings
 
-even lower level functions (maybe in a canon_service)
-these should be implemented by any "canon service/dao"
-
-0) findAllCanonItems: return entire canon
-0) findAllTerms: return all terms from canon
-0) findAllMeanings: return all meanings from canon
-0) findAllAlphanumerics: return all alphanumerics from canon
-
-0) findCanonItemByAlphanumeric(alphanumeric): return canon item by alphanumeric
-0) findTermByAlphanumeric(alphanumeric): return term by alphanumeric
-0) findMeaningByAlphanumeric(alphanumeric): return meaning by alphanumeric
-
-0) findCanonItemByTerm(term): return canon item by term
-0) findAlphanumericByTerm(term): return alphanumeric by term
-0) findMeaningByTerm(term): return meaning by term
 
 */
 
@@ -97,57 +82,3 @@ define(['canon'], function(supreme) {
     return { translate: translate }
 });
 
-
-/*
-
-define(['supreme'], function(supreme) {
-
-    var translate = function(sourceText) {
-        sourceText = sourceText.replace(/\W/g, '');
-
-        var translation = '';
-        translation += recurse(sourceText);
-
-        while(sourceText.length > 1) {
-            var numbers = sourceText.split('');
-            var sum = sumArray(numbers);
-
-            if(numbers[0] > numbers[1] && numbers[1] > 0) {
-                translation += 'not being born to ';
-            }
-            else {
-                translation += 'all being born to ';
-            }
-
-            sourceText = sum.toString();
-            translation += recurse(sourceText);
-        }
-
-        return translation;
-    }
-
-    function recurse(sourceText) {
-        if(sourceText.length == 0) {
-            return '';
-        }
-        else {
-            sourceText = sourceText.replace(/\W/g, '');
-            var supremeAlphanumerics = supreme.alphanumerics;
-            var firstChar = sourceText.split('')[0].toUpperCase();
-            var restChars = sourceText.substring(1, sourceText.length);
-            return supremeAlphanumerics[firstChar] + ' ' + recurse(restChars);
-        }
-    }
-
-    function sumArray(numbers) {
-        var sum = 0;
-        for (var i = 0; i < numbers.length; i++) {
-            sum += parseInt(numbers[i]);
-          }
-          return sum;
-    }
-
-    return { translate: translate }
-});
-
- */

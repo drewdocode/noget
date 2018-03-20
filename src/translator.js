@@ -89,6 +89,7 @@
 
                 return math.join(' ');
             },
+        };
 
         return translator;
 }));

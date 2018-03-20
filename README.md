@@ -2,6 +2,8 @@
 
 #### Nation of Gods and Earths Translator
 
+npm test
+
 1 - Knowledge
 2 - Wisdom
 3 - Understanding
@@ -38,5 +40,5 @@ V - Victory: a great achievement
 W - Wisdom: to speak knowledge
 X - Unknown: the lack of knowledge
 Y - Why
-Z -Zig-Zag-Zig: from Knowledge to Wisdom to Understanding
+Z - Zig-Zag-Zig: from Knowledge to Wisdom to Understanding
 

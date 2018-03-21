@@ -15,7 +15,7 @@
 
         var translator = {
 
-            toSupremeTermsFromLettersInGivenText: function(text) {
+            toSupremeTerms: function(text) {
                 var alphanumerics = text.replace(/\W/g, '').toUpperCase().split('');
                 var terms = alphanumerics.map(function(alphanumeric) {
                     return canonService.findTermByAlphanumeric(alphanumeric);
@@ -23,7 +23,7 @@
                 return terms.join(' ');
             },
 
-            toSupremeNumbersFromLettersInGivenText: function(text) {
+            toSupremeNumbers: function(text) {
                 var alphanumerics = text.replace(/\W/g, '').toUpperCase().split('');
                 var numerics = alphanumerics.map(function(alphanumeric) {
                     return canonService.findNumericByAlphanumeric(alphanumeric);
@@ -31,16 +31,16 @@
                 return numerics.join(' ');
             },
 
-            doTheMathsOfSupremeNumbersOfLettersInGivenText: function(text) {
+            doTheMathsOfText: function(text) {
                 var self = this;
-                var numbers = this.toSupremeNumbersFromLettersInGivenText(text).split(' ').map(Number);
+                var numbers = this.toSupremeNumbers(text).split(' ').map(Number);
                 var math = numbers.map(function(number) {
-                    return self.doTheMathOfGivenNumber(number);
+                    return self.doTheMathOfNumber(number);
                 });
                 return math.join(', ');
             },
 
-            doTheMathOfGivenNumber: function(number) {
+            doTheMathOfNumber: function(number) {
                 var math = [];
                 if(number <= 9) {
                     math.push(canonService.findTermByNumeric(number));
@@ -64,14 +64,14 @@
                     });
 
                     // recursion on the sum
-                    math.push(this.doTheMathOfGivenNumber(sum));
+                    math.push(this.doTheMathOfNumber(sum));
                 }
 
                 return math.join(' ');
             },
 
             toTodaysMath: function() {
-                return this.doTheMathOfGivenNumber(new Date().getDate());
+                return this.doTheMathOfNumber(new Date().getDate());
             },
         };
 

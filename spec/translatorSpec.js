@@ -42,22 +42,22 @@ return them as a newline-delimited block of meanings
 
 
         it('toSupremeTermsFromLettersInGivenText', function() {
-            expect(this.translator.toSupremeTermsFromLettersInGivenText('gold'))
+            expect(this.translator.toSupremeTerms('gold'))
             .toBe('God Cipher Love, Hell or Right Divine');
         });
 
         it('toSupremeNumbersFromLettersInGivenText', function() {
-            expect(this.translator.toSupremeNumbersFromLettersInGivenText('gold'))
+            expect(this.translator.toSupremeNumbers('gold'))
             .toBe('7 15 12 4');
         });
 
         it('doTheMathsOfSupremeNumbersOfLettersInGivenText', function() {
-            expect(this.translator.doTheMathsOfSupremeNumbersOfLettersInGivenText('gold'))
+            expect(this.translator.doTheMathsOfText('gold'))
             .toBe('God, Knowledge Power and Refinement all being born to Equality, Knowledge Wisdom all being born to Understanding, Culture and Freedom');
         });
 
         it('doTheMathOfGivenNumber', function() {
-            expect(this.translator.doTheMathOfGivenNumber('97500'))
+            expect(this.translator.doTheMathOfNumber('97500'))
             .toBe('Born God Power and Refinement Cipher Cipher all being born to Wisdom Knowledge all being born to Understanding');
         });
 

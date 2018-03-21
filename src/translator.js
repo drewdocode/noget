@@ -1,35 +1,21 @@
-//define(['canonService'], function (canonService) {
 (function (root, factory) {
-
-    var dependencies = [
-        '../src/canon/canonService',
-        '../node_modules/lodash/lodash.min'
-    ];
-
+    var dependencies = ['./canon/canonService'];
     if (typeof define === 'function' && define.amd) {
         define(dependencies, factory);
     } else if (typeof module === 'object' && module.exports) {
-        module.exports = factory(
-            require(dependencies[0]),
-            require(dependencies[1])
-        );
+        module.exports = factory(require(dependencies[0]));
     } else {
-        root.returnExports = factory(
-            root.canonService,
-            root._
-        );
+        root.returnExports = factory(root.canonService);
     }
-
 }(typeof self !== 'undefined' ? self : this, function (canonService, _) {
+
+// i.e. define(['canonService'], function (canonService) {
 
         'use strict';
 
         var translator = {
 
-            termify: function(text) {
-
-                // turn string of non/alphanumerics into a string of space-delimited terms
-
+            toSupremeTermsFromLettersInGivenText: function(text) {
                 var alphanumerics = text.replace(/\W/g, '').toUpperCase().split('');
                 var terms = alphanumerics.map(function(alphanumeric) {
                     return canonService.findTermByAlphanumeric(alphanumeric);
@@ -37,10 +23,7 @@
                 return terms.join(' ');
             },
 
-            numerify: function(text) {
-
-                // turn string of non/alphanumerics into a string of space-delimited numerics
-
+            toSupremeNumbersFromLettersInGivenText: function(text) {
                 var alphanumerics = text.replace(/\W/g, '').toUpperCase().split('');
                 var numerics = alphanumerics.map(function(alphanumeric) {
                     return canonService.findNumericByAlphanumeric(alphanumeric);
@@ -48,19 +31,16 @@
                 return numerics.join(' ');
             },
 
-            doTheMathText: function(text) {
-
-                // do the math on the numeric of each alphanumeric a la today's math
-
+            doTheMathsOfSupremeNumbersOfLettersInGivenText: function(text) {
                 var self = this;
-                var numbers = this.numerify(text).split(' ').map(Number);
+                var numbers = this.toSupremeNumbersFromLettersInGivenText(text).split(' ').map(Number);
                 var math = numbers.map(function(number) {
-                    return self.doTheMathNumber(number);
+                    return self.doTheMathOfGivenNumber(number);
                 });
                 return math.join(', ');
             },
 
-            doTheMathNumber: function(number) {
+            doTheMathOfGivenNumber: function(number) {
                 var math = [];
                 if(number <= 9) {
                     math.push(canonService.findTermByNumeric(number));
@@ -84,10 +64,14 @@
                     });
 
                     // recursion on the sum
-                    math.push(this.doTheMathNumber(sum));
+                    math.push(this.doTheMathOfGivenNumber(sum));
                 }
 
                 return math.join(' ');
+            },
+
+            toTodaysMath: function() {
+                return this.doTheMathOfGivenNumber(new Date().getDate());
             },
         };
 

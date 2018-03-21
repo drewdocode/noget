@@ -21,12 +21,6 @@
         Sha Be Allah - @IamShaBeAllah
         http://www.abovetopsecret.com/forum/thread565324/pg1
         https://www.youtube.com/watch?v=p6ziEaVeWUs - Knowledge God
-
-If you was to break down todays supreme mathematics through the supreme alphabet todays supreme mathematics would represent Allah + Islam = (all being born to) Justice
-Allah is the supreme being.
-Islam is a lifestyle not a religion our lifestyle is I-God
-Justice is displaying just behavior or treatment
-
     */
 
         beforeEach(function() {

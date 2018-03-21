@@ -34,41 +34,37 @@ return them as a newline-delimited block of meanings
             this.translator = null;
         });
 
-        it('can termify i.e. get terms from an alphanumeric i.e. translate each alphanumeric in a given text to it\'s term', function() {
-            expect(this.translator.termify('Andrew'))
-            .toBe('Allah In or Now Nation Divine Rule or Ruler Equality Wisdom');
+//            toSupremeTermsFromLettersInGivenText: function(text) {
+//            toSupremeNumbersFromLettersInGivenText: function(text) {
+//            doTheMathsOfSupremeNumbersOfLettersInGivenText: function(text) {
+//            doTheMathOfGivenNumber: function(number) {
+//            toTodaysMath: function(date) {
+
+
+        it('toSupremeTermsFromLettersInGivenText', function() {
+            expect(this.translator.toSupremeTermsFromLettersInGivenText('gold'))
+            .toBe('God Cipher Love, Hell or Right Divine');
         });
 
-        it('can numerify i.e. get numeric from any alphanumeric i.e. translate each alphanumeric in a given text to it\'s numeric', function() {
-            expect(this.translator.numerify('Drew'))
-            .toBe('4 18 5 23');
+        it('toSupremeNumbersFromLettersInGivenText', function() {
+            expect(this.translator.toSupremeNumbersFromLettersInGivenText('gold'))
+            .toBe('7 15 12 4');
         });
 
-        it('can doTheMathText i.e. comma+space delimited "normal today\'s math calculation" on the numeric of each alphanumeric in a text', function() {
-            expect(this.translator.doTheMathText('Drew'))
-            .toBe(''
-            + 'Culture and Freedom, '
-            + 'Knowledge Build or Destroy all being born to Born, '
-            + 'Power and Refinement, '
-            + 'Wisdom Understanding all being born to Power and Refinement'
-            + '');
+        it('doTheMathsOfSupremeNumbersOfLettersInGivenText', function() {
+            expect(this.translator.doTheMathsOfSupremeNumbersOfLettersInGivenText('gold'))
+            .toBe('God, Knowledge Power and Refinement all being born to Equality, Knowledge Wisdom all being born to Understanding, Culture and Freedom');
         });
 
-        it('can doTheMathNumber i.e. space delimited "normal today\'s math calculation" on a number', function() {
-            expect(this.translator.doTheMathNumber(1))
-            .toBe('Knowledge');
-            expect(this.translator.doTheMathNumber(11))
-            .toBe('Knowledge Knowledge all being born to Wisdom');
-            expect(this.translator.doTheMathNumber(100))
-            .toBe('Knowledge Cipher Cipher all being born to Knowledge');
-            expect(this.translator.doTheMathNumber(20))
-            .toBe('Wisdom Cipher all being born to Wisdom');
+        it('doTheMathOfGivenNumber', function() {
+            expect(this.translator.doTheMathOfGivenNumber('97500'))
+            .toBe('Born God Power and Refinement Cipher Cipher all being born to Wisdom Knowledge all being born to Understanding');
         });
 
-//        it('can doTheAlphabet i.e. comma+space delimited "normal today\'s math calculation" on the numeric of each alphanumeric in a text', function() {
-//            expect(this.translator.doTheAlphabet('Drew'))
-//            .toBe('Divine, Rule or Ruler, Power and Refinement, Wisdom');
-//        });
+        it('toTodaysMath', function() {
+            expect(this.translator.toTodaysMath())
+            .toBe('Wisdom Knowledge all being born to Understanding');
+        });
 
     });
 }));

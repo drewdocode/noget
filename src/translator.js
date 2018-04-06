@@ -41,6 +41,11 @@
             },
 
             doTheMathOfNumber: function(number) {
+                if(!Number.isInteger(number)) {
+                    // convert to integer by removing the decimal
+                    number = parseInt(number.toString().replace('.', ''));
+                }
+
                 var math = [];
                 if(number <= 9) {
                     math.push(canonService.findTermByNumeric(number));
@@ -63,7 +68,7 @@
                         return parseInt(a) + parseInt(b);
                     });
 
-                    // recursion on the sum
+                    // recurse on the sum
                     math.push(this.doTheMathOfNumber(sum));
                 }
 
@@ -72,6 +77,40 @@
 
             toTodaysMath: function() {
                 return this.doTheMathOfNumber(new Date().getDate());
+            },
+
+            toTodaysBuild: function() {
+                var math = this.doTheMathOfNumber(new Date().getDate());
+                var terms = this.extractArrayOfTermsFromText(math);
+                var meanings = terms.map(function(term) {
+                    return canonService.findMeaningByTerm(term);
+                });
+                return meanings.join('; ');
+            },
+
+            buildOnNumber: function(number) {
+                var build = '';
+                if(Number.isInteger(number)) {
+                    var math = this.doTheMathOfNumber(number);
+                    var terms = this.extractArrayOfTermsFromText(math);
+                    var meanings = terms.map(function(term) {
+                        return canonService.findMeaningByTerm(term);
+                    });
+                    build = meanings.join('; ');
+                }
+                else {
+                    build = '';
+                }
+                return build;
+            },
+
+            extractArrayOfTermsFromText: function(text) {
+                var termsInMath = [];
+                var allPossibleTerms = canonService.findAllNumericTerms();
+                var termsInMath = allPossibleTerms.map(function(term) {
+                    return text.includes(term) ? term : '';
+                });
+                return termsInMath.filter(function(term) { return term !== ''; });
             },
         };
 

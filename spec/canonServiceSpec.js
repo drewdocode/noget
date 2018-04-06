@@ -66,6 +66,19 @@
 
         });
 
+        it("canon service finds meanings from terms", function() {
+
+            var U = {
+                alphanumeric: 'U',
+                numeric: 21,
+                term: 'You, Universe, and U-N-I-Verse',
+                meaning: 'Universe - The universe is the home of galaxies, which is home to our solar system. The universe owns and belongs to all Asiatic men and women. U - (You) and I verse. You is pertaining to the woman when dealing in completing the home (Child). You also means self, King, Savior, Queen, her, woman.'
+            };
+
+            expect(this.canonService.findMeaningByTerm('You, Universe, and U-N-I-Verse')).toEqual(U.meaning);
+
+        });
+
     });
 
 }));

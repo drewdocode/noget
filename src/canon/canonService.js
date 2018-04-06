@@ -20,39 +20,34 @@
             },
 
             findAllAlphanumerics: function () {
-                var alphanumerics = [];
-                canon.forEach(function(value, key) {
-                    canon[key].forEach(function(_value, _key) {
-                        if(_key === 'alphanumeric') {
-                            alphanumerics.push(_value);
-                        }
-                    });
+                return canon.map(function(canonItem) {
+                    return canonItem.alphanumeric;
                 });
-                return alphanumerics;
             },
 
             findAllTerms: function () {
-                var terms = [];
-                canon.forEach(function(value, key) {
-                    canon[key].forEach(function(_value, _key) {
-                        if(_key === 'term') {
-                            terms.push(_value);
-                        }
-                    });
+                return canon.map(function(canonItem) {
+                    return canonItem.term;
                 });
-                return terms;
+            },
+
+            findAllNumericTerms: function () {
+                var terms = canon.map(function(canonItem) {
+                    return canonItem.term;
+                })
+                return terms.slice(0, 9);
+            },
+
+            findAllAlphaTerms: function () {
+                return canon.map(function(canonItem) {
+                    return canonItem.term;
+                }).slice(10, 35);
             },
 
             findAllMeanings: function () {
-                var meanings = [];
-                canon.forEach(function(value, key) {
-                    canon[key].forEach(function(_value, _key) {
-                        if(_key === 'meaning') {
-                            meanings.push(_value);
-                        }
-                    });
+                return canon.map(function(canonItem) {
+                    return canonItem.meaning;
                 });
-                return meanings;
             },
 
             findCanonItemByAlphanumeric: function (alphanumeric) {

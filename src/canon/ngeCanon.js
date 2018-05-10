@@ -30,7 +30,7 @@
             alphanumeric: '2',
             numeric: 2,
             term: 'Wisdom',
-            meaning: '*Wisdom is the manifestation of ones knowledge, the ways and actions one uses to make his or her knowledge to know the truth, such as speaking wisely to the wise, to the dumb or to possess a wise Mind. Wisdom is the woman.'
+            meaning: 'Wisdom is the manifestation of ones knowledge, the ways and actions one uses to make his or her knowledge to know the truth, such as speaking wisely to the wise, to the dumb or to possess a wise Mind. Wisdom is the woman.'
         },
         {
             alphanumeric: '3',
@@ -48,20 +48,20 @@
             alphanumeric: '5',
             numeric: 5,
             term: 'Power and Refinement',
-            meaning: '*Power: Power is the truth, truth in origin only means God add God; Doing the knowledge adding on the culture, to show that power, for to go according to the truth is to make ones-self known again. Truth is the power to resurrect the mentally dead from their present state of unawareness and ignorance of self.'
+            meaning: 'Power: Power is the truth, truth in origin only means God add God; Doing the knowledge adding on the culture, to show that power, for to go according to the truth is to make ones-self known again. Truth is the power to resurrect the mentally dead from their present state of unawareness and ignorance of self.'
         },
         {
             alphanumeric: '6',
             numeric: 6,
             term: 'Equality',
-            meaning: '*Equality means to be equal in all aspects of one’s true self.'
+            meaning: 'Equality means to be equal in all aspects of one’s true self.'
         },
         {
             alphanumeric: '7',
             numeric: 7,
             term: 'God',
 //            term: 'God and Perfection',
-            meaning: '*God is the original Asiatic Blackman, the Blackman is God, a wiseman\'s equality born to build or destroy infinity. I, is self, self is the true reality, Son of Man; God Allah.'
+            meaning: 'God is the original Asiatic Blackman, the Blackman is God, a wiseman\'s equality born to build or destroy infinity. I, is self, self is the true reality, Son of Man; God Allah.'
         },
         {
             alphanumeric: '8',
@@ -73,14 +73,14 @@
             alphanumeric: '9',
             numeric: 9,
             term: 'Born',
-            meaning: '*Born is to bring into existence a mental birth of self.'
+            meaning: 'Born is to bring into existence a mental birth of self.'
         },
         {
             alphanumeric: '0',
             numeric: 0,
             term: 'Cipher',
 //            term: 'Cipher, Cypher (Cycle or Circle)',
-            meaning: '*Cipher is the completion of a circle or 360 degrees of Knowledge, Wisdom and Understanding.'
+            meaning: 'Cipher is the completion of a circle or 360 degrees of Knowledge, Wisdom and Understanding.'
         },
         {
             alphanumeric: 'A',

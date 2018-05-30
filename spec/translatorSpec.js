@@ -63,18 +63,18 @@ return them as a newline-delimited block of meanings
 
         it('toTodaysMath', function() {
             expect(this.translator.toTodaysMath())
-            .toBe('Power and Refinement');
+            .toBe('Knowledge God all being born to Build or Destroy');
         });
 
         it('toTodaysBuild - produce meanings for each term', function() {
-            var meaning = '*Power: Power is the truth, truth in origin only means God add God; Doing the knowledge adding on the culture, to show that power, for to go according to the truth is to make ones-self known again. Truth is the power to resurrect the mentally dead from their present state of unawareness and ignorance of self.';
+            var meaning = 'Power: Power is the truth, truth in origin only means God add God; Doing the knowledge adding on the culture, to show that power, for to go according to the truth is to make ones-self known again. Truth is the power to resurrect the mentally dead from their present state of unawareness and ignorance of self.';
             expect(this.translator.toTodaysBuild())
             .toBe(meaning);
         });
 
         it('buildOnNumber - todays build on a specific number', function() {
             var build = 'Knowledge is to know, listen and observe. Knowledge is a body of accumulated facts. Knowledge is the foundation for all things, as the Sun is the foundation for our solar system and man is the foundation for his family.; '
-            + '*Wisdom is the manifestation of ones knowledge, the ways and actions one uses to make his or her knowledge to know the truth, such as speaking wisely to the wise, to the dumb or to possess a wise Mind. Wisdom is the woman.; '
+            + 'Wisdom is the manifestation of ones knowledge, the ways and actions one uses to make his or her knowledge to know the truth, such as speaking wisely to the wise, to the dumb or to possess a wise Mind. Wisdom is the woman.; '
             + 'Understanding is the mental picture one draws of knowledge wisdom. To see things much clearer for what they are, (not for what they present themselves to be) visible through the all Seeing Eye, which is the Mind. Understanding is the child.';
 
             expect(this.translator.buildOnNumber(12))

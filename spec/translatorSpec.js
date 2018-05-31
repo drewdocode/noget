@@ -60,18 +60,22 @@ return them as a newline-delimited block of meanings
             expect(this.translator.doTheMathOfNumber('9.7500'))
             .toBe('Born God Power and Refinement Cipher Cipher all being born to Wisdom Knowledge all being born to Understanding');
         });
-
+        
+/*
+	it('toTodaysMathAddon - return the math for long form date i.e. yyyymmdd instead of just d', function() {
+            expect(this.translator.toTodaysMathAddon())
+            .toBe('Wisdom Cipher Knowledge Build or Destroy Cipher Power and Refinement Understanding Knowledge all being born to Wisdom Cipher all being born to Wisdom');
+        });
         it('toTodaysMath', function() {
             expect(this.translator.toTodaysMath())
-            .toBe('Knowledge God all being born to Build or Destroy');
+            .toBe('Understanding Knowledge all being born to Culture and Freedom');
         });
-
         it('toTodaysBuild - produce meanings for each term', function() {
             var meaning = 'Power: Power is the truth, truth in origin only means God add God; Doing the knowledge adding on the culture, to show that power, for to go according to the truth is to make ones-self known again. Truth is the power to resurrect the mentally dead from their present state of unawareness and ignorance of self.';
             expect(this.translator.toTodaysBuild())
             .toBe(meaning);
         });
-
+*/
         it('buildOnNumber - todays build on a specific number', function() {
             var build = 'Knowledge is to know, listen and observe. Knowledge is a body of accumulated facts. Knowledge is the foundation for all things, as the Sun is the foundation for our solar system and man is the foundation for his family.; '
             + 'Wisdom is the manifestation of ones knowledge, the ways and actions one uses to make his or her knowledge to know the truth, such as speaking wisely to the wise, to the dumb or to possess a wise Mind. Wisdom is the woman.; '

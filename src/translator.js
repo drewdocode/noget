@@ -79,6 +79,14 @@
                 return this.doTheMathOfNumber(new Date().getDate());
             },
 
+            toTodaysMathAddon: function() {
+                var date = new Date();
+		var month = ("0" + (date.getMonth() + 1)).slice(-2);
+		var day = ("0" + date.getDate()).slice(-2);
+		var longdate = date.getFullYear() + '' + month + '' + day; 
+		return this.doTheMathOfNumber(longdate);
+            },
+
             toTodaysBuild: function() {
                 var math = this.doTheMathOfNumber(new Date().getDate());
                 var terms = this.extractArrayOfTermsFromText(math);

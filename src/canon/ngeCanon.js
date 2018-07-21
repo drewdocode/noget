@@ -41,13 +41,13 @@
         {
             alphanumeric: '4',
             numeric: 4,
-            term: 'Culture and Freedom',
+            term: 'Culture Freedom',
             meaning: 'Culture or Freedom: Culture is ones way of life; I self lord asiatic master is the culture of freedom and righteousness, the culture of peace, in which all things coincide and lives in harmony.'
         },
         {
             alphanumeric: '5',
             numeric: 5,
-            term: 'Power and Refinement',
+            term: 'Power Refinement',
             meaning: 'Power: Power is the truth, truth in origin only means God add God; Doing the knowledge adding on the culture, to show that power, for to go according to the truth is to make ones-self known again. Truth is the power to resurrect the mentally dead from their present state of unawareness and ignorance of self.'
         },
         {
@@ -66,7 +66,7 @@
         {
             alphanumeric: '8',
             numeric: 8,
-            term: 'Build or Destroy',
+            term: 'Build Destroy',
             meaning: 'Build or Destroy: Build means to add on to life a positive creation or education; destroy means to know of, take, that which is untrue, and add light to the knowledge.'
         },
         {
